@@ -12,3 +12,8 @@ jobs:
         type: 'zip'
         filename: 'servertexturepack_release.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
+    - name: Upload Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "servertexturepack_release.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
